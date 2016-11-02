@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.rollingstone</groupId>
-	<artifactId>udemy-ecomm-user-service</artifactId>
+	<artifactId>udemy-ecomm-product-service</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
-	<description>Example project demonstrating Spring Cloud based Microservice as a REST API</description>
+	<description>Example project demonstrating Spring Cloud based Product Microservice as a REST API</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -16,7 +16,7 @@
 	</parent>
 
 	<properties>
-		<start-class>com.rollingstone.UserRestAPIApplication</start-class>
+		<start-class>com.rollingstone.ProductRestAPIApplication</start-class>
 	</properties>
 
 	<dependencies>
@@ -86,13 +86,6 @@
 			<version>0.9.1</version>
 			<scope>test</scope>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/com.mangofactory/swagger-springmvc 
-		<dependency>
-			<groupId>com.mangofactory</groupId>
-			<artifactId>swagger-springmvc</artifactId>
-			<version>1.0.1</version>
-		</dependency>  -->
 
 		<dependency>
 			<groupId>io.springfox</groupId>

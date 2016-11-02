@@ -20,16 +20,15 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableAutoConfiguration  // Sprint Boot Automatic Configuration
 @ComponentScan(basePackages = "com.rollingstone")
 @EnableJpaRepositories("com.rollingstone.dao.jpa") // To segregate MongoDB and JPA repositories. Otherwise not needed.
-//@EnableSwagger // This annotation will enable Swagger to auto generate user REST API docs
 @EnableSwagger2
-public class UserRestAPIApplication extends SpringBootServletInitializer {
+public class ProductRestAPIApplication extends SpringBootServletInitializer {
 
-    private static final Class<UserRestAPIApplication> applicationClass = UserRestAPIApplication.class;
+    private static final Class<ProductRestAPIApplication> applicationClass = ProductRestAPIApplication.class;
     private static final Logger log = LoggerFactory.getLogger(applicationClass);
 
 	public static void main(String[] args) {
 		SpringApplication.run(applicationClass, args);
-	}
+	} 
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
