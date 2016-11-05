@@ -15,7 +15,7 @@ import com.rollingstone.dao.jpa.EcommProductRepository;
 import com.rollingstone.domain.Product;
 
 /*
- * Service class to do CRUD for Product through JPS Repository
+ * Service class to do CRUD for Product through JPA Repository
  */
 @Service
 public class EcommProductService {
@@ -50,7 +50,6 @@ public class EcommProductService {
     	productRepository.delete(id);
     }
 
-    //http://goo.gl/7fxvVf
     public Page<Product> getAllProducts(Integer page, Integer size) {
         Page pageOfProducts = productRepository.findAll(new PageRequest(page, size));
         // example of adding to the /metrics

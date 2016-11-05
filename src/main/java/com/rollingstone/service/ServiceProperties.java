@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 /*
  * demonstrates how service-specific properties can be injected
  */
-@ConfigurationProperties(prefix = "user.service", ignoreUnknownFields = false)
+@ConfigurationProperties(prefix = "product.service", ignoreUnknownFields = false)
 @Component
 public class ServiceProperties {
 

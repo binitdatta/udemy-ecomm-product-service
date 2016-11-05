@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rollingstone.RestControllerAspect;
 import com.rollingstone.domain.Product;
 import com.rollingstone.exception.HTTP400Exception;
 import com.rollingstone.service.EcommProductService;
@@ -71,6 +70,14 @@ public class ProductController extends AbstractRestController {
         return product;
     }
 
+    @RequestMapping("/simple/{id}")
+  	public Product getSimpleProduct(@PathVariable("id") Long id) {
+
+      	 Product product = this.productService.getProduct(id);
+         checkResourceFound(product);
+           return product;
+  	}
+    
     @RequestMapping(value = "/{id}",
             method = RequestMethod.PUT,
             consumes = {"application/json", "application/xml"},

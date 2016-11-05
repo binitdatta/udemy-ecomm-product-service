@@ -13,6 +13,6 @@ public class ProductServiceEvent extends ApplicationEvent {
     }
 
     public String toString() {
-        return "My UserService Event";
+        return "My Product Service Event";
     }
 }

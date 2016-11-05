@@ -19,5 +19,7 @@ public class RestControllerAspect {
     @Before("execution(public * com.rollingstone.api.rest.*Controller.*(..))")
     public void logBeforeRestCall(JoinPoint pjp) throws Throwable {
     	log.info(":::::AOP Before REST call:::::" + pjp);
+    	log.info(":::::Kaku.........................:::::" + pjp);
+
     }
 }
